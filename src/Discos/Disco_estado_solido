@@ -4,7 +4,7 @@ module Disco_estado_solido
     @gasto_constante = gasto
   end
 
-  def consumo_pc
+  def consumo
     @gasto_constante
   end
 
