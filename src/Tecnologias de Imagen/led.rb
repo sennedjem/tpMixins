@@ -1,8 +1,10 @@
+require_relative '../Tecnologias de Imagen/digital'
+
 module LED
   include Digital
 
   def consumo
-    4*tamanio
+    @tamanio_pantalla
   end
 
 end

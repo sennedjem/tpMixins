@@ -1,8 +1,10 @@
+require_relative '../Tecnologias de Imagen/digital'
+
 module LCD
   include Digital
 
   def consumo
-    1*tamanio
+    4* @tamanio_pantalla
   end
 
 end
