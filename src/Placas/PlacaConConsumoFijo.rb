@@ -1,9 +1,10 @@
 module PlacaConConsumoFijo
-  def initialize(consumo)
+
+  def set_consumo_fijo_placa(consumo)
     @consumo_promedio= consumo
   end
 
-  def consumo
-    @consumo_promedio+super
+  def consumo_pc
+    @consumo_promedio + super
   end
 end

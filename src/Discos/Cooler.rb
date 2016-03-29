@@ -1,7 +1,8 @@
 module Cooler
 
-  def consumo
-    0.5
+  def consumo_pc
+    super + 0.5
   end
+
 
 end

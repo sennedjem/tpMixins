@@ -1,10 +1,10 @@
 module PlacaConGpuYConsumoVariable
 
-  def consumo
-    pantalla.ppp * (1/ 100000) + super
+  def consumo_pc
+    @pantalla.ppp * (1/ 100000) + super
   end
 
-  def es_Apta_Videojuegos
+  def es_apta_videojuegos?
     true
   end
 end

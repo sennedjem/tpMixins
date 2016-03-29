@@ -1,13 +1,24 @@
 class PC
+
+  attr_accessor :pantalla
+
   def initialize(pantalla)
-    @pantalla=pantalla
+    self.pantalla = pantalla
+  end
+
+  def consumo_de_pantalla
+    self.pantalla.consumo
   end
 
   def consumo_pc
-    @pantalla.consumo + super.consumo
+   super
   end
 
-  def es_Apta_Videojuegos
-    @pantalla.usar_para_videojuegos? && super.es_Apta_Videojuegos
+  def consumo_total
+    self.consumo_de_pantalla + self.consumo_pc
+  end
+
+  def es_apta_videojuegos?
+    @pantalla.usar_para_videojuegos? && super
   end
 end

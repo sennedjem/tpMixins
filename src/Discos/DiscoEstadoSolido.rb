@@ -1,10 +1,10 @@
 module Disco_estado_solido
 
-  def set_gasto_cte(gasto)
+  def set_gasto_cte_ssd(gasto)
     @gasto_constante = gasto
   end
 
-  def consumo
+  def consumo_pc
     @gasto_constante
   end
 
