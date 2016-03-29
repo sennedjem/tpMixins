@@ -1,7 +1,7 @@
 module CRT
 
   def consumo
-    5*tamanio
+    5* @tamanio_pantalla
   end
 
   def definicion_maxima
