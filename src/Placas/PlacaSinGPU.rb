@@ -1,4 +1,4 @@
-class PlacaSinGpu
+class PlacaSinGPU
   include PlacaConConsumoFijo
 
   def es_Apta_Videojuegos
