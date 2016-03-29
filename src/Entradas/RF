@@ -1,0 +1,15 @@
+module Radio_frecuencia
+
+  def set_def_maxima_rf
+    @def_maxima = 480
+  end
+
+  def consumo
+    0
+  end
+
+  def tasa_refresco_real
+    50
+  end
+
+end

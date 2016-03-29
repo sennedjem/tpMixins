@@ -1,0 +1,15 @@
+module Audio_video
+
+  def set_def_maxima_av
+    @def_maxima = 480
+  end
+
+  def consumo
+
+  end
+
+  def tasa_refresco_real
+    50
+  end
+
+end
