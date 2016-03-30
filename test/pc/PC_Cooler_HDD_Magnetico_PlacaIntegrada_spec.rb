@@ -11,7 +11,7 @@ describe 'Una PC con un HDD magnetico, y placa integrada con un cooler' do
 
   before :each do
     @monitor = Monitor_de_PC.new(17,1920,1080).extend(CRT).extend(Audio_video)
-    @compu = PC.new(@monitor).extend(PlacaIntegrada).extend(Cooler).extend(Disco_rigido_magnetico)
+    @compu = PC.new(@monitor).extend(PlacaIntegrada).extend(Cooler).extend(Cooler).extend(Disco_rigido_magnetico)
   end
 
   it 'PC entiende consumo' do
