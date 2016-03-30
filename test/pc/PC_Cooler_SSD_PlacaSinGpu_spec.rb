@@ -11,7 +11,7 @@ describe 'Una PC con un SSD, y placa integrada con un cooler' do
 
   before :each do
     @monitor = Monitor_de_PC.new(17,1920,1080).extend(CRT).extend(Audio_video)
-    @compu = PC.new(@monitor).extend(Disco_estado_solido).extend(PlacaSinGPU).extend(Cooler).extend(Cooler).extend(Cooler)
+    @compu = PC.new(@monitor).extend(Disco_estado_solido).extend(PlacaSinGPU).extend(Cooler)
   end
 
   it 'PC entiende consumo' do
@@ -30,10 +30,10 @@ describe 'Una PC con un SSD, y placa integrada con un cooler' do
     expect(@compu.es_apta_videojuegos?).to be false
   end
 
-  it 'El consumo deberia ser de watts/h' do
+  it 'El consumo deberia ser de 274 watts/h' do
     @compu.set_gasto_cte_ssd(130)
     @compu.set_consumo_fijo_placa(50)
-    expect(@compu.consumo_total).to eq 262.1
+    expect(@compu.consumo_total).to eq 274
   end
 
 
