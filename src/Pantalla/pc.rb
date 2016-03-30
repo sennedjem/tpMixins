@@ -6,12 +6,16 @@ class PC
     self.pantalla = pantalla
   end
 
+  def ppp
+    pantalla.ppp
+  end
+
   def consumo_de_pantalla
     self.pantalla.consumo
   end
 
   def consumo_pc
-   super
+     super
   end
 
   def consumo_total

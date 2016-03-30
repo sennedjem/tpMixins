@@ -1,6 +1,7 @@
 require 'rspec'
 require_relative '../../../src/Pantalla/tv'
 require_relative '../../../src/Entradas/Audio_video'
+require_relative '../../../src/Entradas/HDMI'
 require_relative '../../../src/Tecnologias de Imagen/lcd'
 
 describe 'Televisor LCD con entrada AV' do

@@ -5,7 +5,7 @@ module Disco_rigido_magnetico
   end
 
   def consumo_pc
-      @rev_por_min * 60 / 10000
+  super +  ((@rev_por_min * 60)/10000)
   end
 
 end

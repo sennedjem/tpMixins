@@ -11,7 +11,7 @@ describe 'Una PC con un HDD magnetico, y placa integrada con un cooler' do
 
   before :each do
     @monitor = Monitor_de_PC.new(17,1920,1080).extend(CRT).extend(Audio_video)
-    @compu = PC.new(@monitor).extend(Disco_rigido_magnetico).extend(PlacaIntegrada).extend(Cooler)
+    @compu = PC.new(@monitor).extend(PlacaIntegrada).extend(Cooler).extend(Disco_rigido_magnetico)
   end
 
   it 'PC entiende consumo' do
@@ -30,10 +30,10 @@ describe 'Una PC con un HDD magnetico, y placa integrada con un cooler' do
     expect(@compu.es_apta_videojuegos?).to be false
   end
 
-  it 'El consumo deberia ser de 274 watts/h con un disco con 130 revoluciones por minuto' do
-    @compu.set_revoluciones_por_minuto_hdd(130)
+  it 'El consumo deberia ser de 151 watts/h con un disco con 130 revoluciones por minuto' do
+    @compu.set_revoluciones_por_minuto_hdd(1300)
     @compu.set_consumo_fijo_placa(50)
-    expect(@compu.consumo_total).to eq 144
+    expect(@compu.consumo_total).to eq 151
   end
 
 

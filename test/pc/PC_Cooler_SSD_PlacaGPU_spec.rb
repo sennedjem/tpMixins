@@ -11,7 +11,7 @@ describe 'Una PC con un SSD, y placa con gpu con un cooler' do
 
   before :each do
     @monitor = Monitor_de_PC.new(14,640,480).extend(CRT).extend(HDMI)
-    @compu = PC.new(@monitor).extend(Disco_estado_solido).extend(PlacaConGpuYConsumoVariable).extend(Cooler)
+    @compu = PC.new(@monitor).extend(PlacaConGpuYConsumoVariable).extend(Cooler).extend(Disco_estado_solido)
   end
 
   it 'PC entiende consumo' do
@@ -28,6 +28,10 @@ describe 'Una PC con un SSD, y placa con gpu con un cooler' do
 
   it 'Deberia ser apta para videojuegos' do
     expect(@compu.es_apta_videojuegos?).to be true
+  end
+
+  it 'El consumo del monitor debe ser de  watts/h' do
+    expect(@monitor.consumo).to eq 84
   end
 
   it 'El consumo deberia ser de 214.5 watts/h' do

@@ -5,6 +5,6 @@ module PlacaConConsumoFijo
   end
 
   def consumo_pc
-    @consumo_promedio + super
+    @consumo_promedio
   end
 end

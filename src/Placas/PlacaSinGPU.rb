@@ -4,6 +4,6 @@ module PlacaSinGPU
   include PlacaConConsumoFijo
 
   def es_apta_videojuegos?
-    (ln(ppp) / consumo) > 4
+    (Math.log(self.ppp) / self.consumo_pc) > 4
   end
 end

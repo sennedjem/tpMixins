@@ -1,7 +1,6 @@
 require 'rspec'
 require_relative '../../../src/Pantalla/tv'
 require_relative '../../../src/Entradas/HDMI'
-require_relative '../../../src/Entradas/Cable'
 require_relative '../../../src/Entradas/RF'
 require_relative '../../../src/Entradas/VGA'
 require_relative '../../../src/Entradas/Audio_video'
@@ -95,31 +94,31 @@ describe 'Televisor LCD con entrada HDMI' do
   end
 
   it 'Puede conectarse con un cable RF' do
-    @rf = Cable.new.extend(Radio_frecuencia)
+    @rf = Object.new.extend(Radio_frecuencia)
     @rf.set_def_maxima_cable
     expect(@tele.puede_conectarse_con_cable?(@rf)).to be true
   end
 
   it 'Puede conectarse con un cable AV' do
-    @av = Cable.new.extend(Audio_video)
+    @av = Object.new.extend(Audio_video)
     @av.set_def_maxima_cable
     expect(@tele.puede_conectarse_con_cable?(@av)).to be true
   end
 
   it 'No puede conectarse con un cable HDMI de 2160p' do
-    @hdmi = Cable.new.extend(HDMI)
+    @hdmi = Object.new.extend(HDMI)
     @hdmi.set_def_maxima_cable(2160)
     expect(@tele.puede_conectarse_con_cable?(@hdmi)).to be false
   end
 
   it 'Puede conectarse con un cable HDMI de 1080p' do
-    @hdmi = Cable.new.extend(HDMI)
+    @hdmi = Object.new.extend(HDMI)
     @hdmi.set_def_maxima_cable(1080)
     expect(@tele.puede_conectarse_con_cable?(@hdmi)).to be true
   end
 
   it 'Puede conectarse con un cable VGA de 720p' do
-    @vga = Cable.new.extend(VGA)
+    @vga = Object.new.extend(VGA)
     @vga.set_def_maxima_cable(720)
     expect(@tele.puede_conectarse_con_cable?(@vga)).to be true
   end

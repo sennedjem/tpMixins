@@ -5,7 +5,8 @@ module Disco_estado_solido
   end
 
   def consumo_pc
-    @gasto_constante
+      @gasto_constante + super
+
   end
 
 end
