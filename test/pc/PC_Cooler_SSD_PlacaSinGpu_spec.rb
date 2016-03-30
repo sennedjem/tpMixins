@@ -5,13 +5,13 @@ require_relative '../../src/Pantalla/Monitor_de_PC'
 require_relative '../../src/Pantalla/pc'
 require_relative '../../src/Discos/Cooler'
 require_relative '../../src/Discos/DiscoEstadoSolido'
-require_relative '../../src/Placas/PlacaIntegrada'
+require_relative '../../src/Placas/PlacaSinGPU'
 
 describe 'Una PC con un SSD, y placa integrada con un cooler' do
 
   before :each do
     @monitor = Monitor_de_PC.new(17,1920,1080).extend(CRT).extend(Audio_video)
-    @compu = PC.new(@monitor).extend(Disco_estado_solido).extend(PlacaIntegrada).extend(Cooler).extend(Cooler).extend(Cooler)
+    @compu = PC.new(@monitor).extend(Disco_estado_solido).extend(PlacaSinGPU).extend(Cooler).extend(Cooler).extend(Cooler)
   end
 
   it 'PC entiende consumo' do
